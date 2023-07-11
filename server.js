@@ -14,7 +14,7 @@ app.post('/api/chat', async (req, res) => {
         max_tokens: 150,
     }, {
         headers: {
-            'Authorization': `Bearer YOUR_OPENAI_SECRET_KEY`,
+            'Authorization': `Bearer ${process.env.OPENAI_SECRET_KEY}`,
             'Content-Type': 'application/json'
         }
     });
