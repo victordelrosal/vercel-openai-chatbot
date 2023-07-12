@@ -9,7 +9,7 @@ document.querySelector("#chat-form").addEventListener('submit', (e) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ prompt: userText })
+        body: JSON.stringify({ message: userText })
     }).then(response => response.json())
       .then(data => updateChat('bot', data))
       .catch((error) => {
